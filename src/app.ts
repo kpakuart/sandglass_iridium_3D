@@ -257,6 +257,9 @@ class FirstPersonTemplate {
 
 		
 		async function toggleModal3() {
+			if (!window.ethereum) {
+				alert('Pleact connect wallet!');
+			}
 			if (!window?.ethereum.selectedAddress) {
 				mintContainer.style.visibility = 'hidden';
 				connectContainer.style.visibility = 'visible';
