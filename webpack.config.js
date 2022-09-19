@@ -10,7 +10,6 @@ module.exports = {
         filename: "js/bundleName.js", //name for the js file that is created/compiled in memory
         clean: true,
         path: path.resolve(__dirname, 'dist'),
-        static: path.resolve(appDirectory, "public"),
         //sourceMapFilename: "[name].js.map",
         
     },
