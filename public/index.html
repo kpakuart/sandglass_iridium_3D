@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Sandglass Iridium</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<button class="trigger" style="margin: 4px; display: none; visibility: hidden;">&nbsp;</button>
+
+<div class="modal">
+	<div id="modalHeaderCloseDiv" class="modal-header-close-div"><span class="close-button">X</span></div>
+	<div id="modalContent" class="modal-content">
+		<div class="modal-header-main">
+			<div id="modalHeaderDiv" class="modal-header-div">&nbsp;</div>
+		</div>
+		<div id="modalMainFrame">&nbsp;</div>
+		<div class="modal-buttons-div">
+			<div id="modalButtonDivLeft" class="modal-button-div-left">&nbsp;</div>
+			<div id="modalButtonDivRight" class="modal-button-div-right">&nbsp;</div>
+		</div>
+	</div>
+</div>
+	
+<button class="trigger2" style="margin: 4px; display: none; visibility: hidden;">&nbsp;</button>
+
+<div class="modal2">
+  <div id="modalHeaderCloseDiv2" class="modal-header-close-div2"><span class="close-button2">X</span></div>
+  <div class="modal-content2"> 
+    <h1>Sandglass Iridium</h1>
+    <br />
+    <h2>A collection of 729 generative art pieces on the Avalanche blockchain.<br />
+    <br />
+        Click on the hourglass to to connect your wallet and mint. 
+    <br/>
+        Click on images for more detailed information.
+    </h2>
+    <h3>CONTROLS:</h3>
+    <p><strong>On Desktop</strong><br />
+      <br />
+      Use the mouse to look around<br />
+      <br />
+        W key - Move Forward<br />
+        A key - Move Left<br />
+        D key - Move Right<br />
+        S key - Move backwards<br />
+      <br />
+      <br />
+    </p>
+    <p><strong>On Mobile</strong><br />
+      <br />
+      Swipe finger to look around<br />
+      <br />
+      Use the left thumb on the virtual joystick to walk around<br />
+      <br />
+      <br />
+    </p>
+    <p><a href="https://nftrade.com/assets/avalanche/0x36adfabdbd6a2ff9f1f2504f6b9550def44a61c4" target="_blank">See the collection at NFTrade</a></p>
+  </div>
+</div>
+
+<div class="modal3" id="hourglass_modal">
+	<div id="modalHeaderCloseDiv3" class="modal-header-close-div3"><span class="close-button3">X</span></div>
+	<div id="modalContent3" class="modal-content3">
+        <h3>
+            "An inch of time is an inch of gold, but you can’t buy that inch of time with an inch of gold.”
+        </h3>
+        <div id="mint-container">
+            <h2>Mint a Sandglass Iridium generative art for .15 AVAX</h2>
+            <div>
+                <button id="mintButton">Mint</button> 
+            </div>
+            <div id="ownedItemsContainer">
+
+            </div>
+        </div>
+        <div id="connect-container">
+            <h2>Please connect your wallet.</h2>
+            <button id="connectButton">Connect Wallet</button>
+        </div>
+	</div>
+</div>
+
+<div class="modal4" id="mint_modal">
+	<div id="modalHeaderCloseDiv4" class="modal-header-close-div4"><span class="close-button4">X</span></div>
+	<div id="modalContent4" class="modal-content4">
+        <h2>
+            Thank you! You have successfully minted a Sandglass Iridium NFT!
+        </h2>
+        <div id="mint-finished-container">
+            <h2>Go to <a href="https://nftrade.com/assets/avalanche/0x36adfabdbd6a2ff9f1f2504f6b9550def44a61c4" target="_blank" rel="noreferrer">NFTrade</a> to view the collectionn</h2>
+        </div>
+        <h4 id="minted-supply-text"></h4>
+	</div>
+</div>
+<canvas id="renderCanvas"></canvas>
+</body>
+</html>
