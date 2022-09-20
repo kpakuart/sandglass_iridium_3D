@@ -258,7 +258,7 @@ class FirstPersonTemplate {
 		
 		async function toggleModal3() {
 			if (!window.ethereum) {
-				alert('Please connect a wallet!');
+				alert('Please connect an Ethereum/C-chain wallet!');
 			}
 			if (!window?.ethereum.selectedAddress) {
 				mintContainer.style.visibility = 'hidden';
@@ -332,7 +332,7 @@ class FirstPersonTemplate {
 			}
 			let hourglassModalElement = document.getElementById('hourglass_modal');
 			let hourglassClasses = hourglassModalElement.classList;
-			if ((hit.pickedMesh.id === 'Glass' || hit.pickedMesh.id === 'Wood') && event.target.className !== 'close-button3' && !hourglassClasses.contains("show-modal3") ) {
+			if ((hit.pickedMesh.id === 'hourglass' || hit.pickedMesh.id === 'Wood') && event.target.className !== 'close-button3' && !hourglassClasses.contains("show-modal3") ) {
 				toggleModal3();
 			}
 		}
