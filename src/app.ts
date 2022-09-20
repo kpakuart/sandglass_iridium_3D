@@ -26,7 +26,7 @@ class FirstPersonTemplate {
             disableWebGL2Support: false
         });
         this._scene = new BABYLON.Scene(this._engine);
-        this._camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(-7, 2, -25), this._scene);
+        this._camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(1.5, 0, -33), this._scene);
 
 
         if(window.ethereum) {
@@ -161,13 +161,13 @@ class FirstPersonTemplate {
 
 		engine.loadingScreen = new loadingScreen(scene);
     	engine.displayLoadingUI();
-		let hdrTexture =new BABYLON.HDRCubeTexture("/assets/HighFantasy4k.hdr", scene, 1024, false, true, false, true);
-		scene.createDefaultSkybox(hdrTexture, true, 10000);
+		//let hdrTexture =new BABYLON.HDRCubeTexture("/assets/HighFantasy4k.hdr", scene, 1024, false, true, false, true);
+		//scene.createDefaultSkybox(hdrTexture, true, 10000);
 		// This creates a light, aiming 0,1,0 - to the sky (non-mesh)
-		let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(10, 4, 0), scene);
+		let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1.5, 5, 25), scene);
 
 		// Default intensity is 1. Let's dim the light a small amount
-		light.intensity = .2;
+		light.intensity = .3;
 
 		//Creates a gui label to display the clicked mesh
 		let guiCanvas = GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
@@ -310,7 +310,7 @@ class FirstPersonTemplate {
 			var meshContentMain = {
 				'Plane.011': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/12.png" alt="Sandglass Iridium #12 - Warriors"/>',
 				'Plane.003': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/4.png" alt="Sandglass Iridium #4 - Oasis"/>',
-				'Plane.009': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/9.png" alt="Sandglass Iridium #9 - Carpet Riders"/>',			
+				'Plane.009': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/8.png" alt="Sandglass Iridium #8 - Carpet Riders"/>',			
 				'Plane.004': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/2.png" alt="Sandglass Iridium #2 - Shepherd"/>',
 				'Plane.001': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/3.png" alt="Sandglass Iridium #3 - Mudang"/>',
 				'Plane.005': '<img class="imgPortrait" src="https://7qa3fwceezwijcmxffj7t7cjh3chk2fxtgswdcsbi5im33iveqqa.arweave.net/_AGy2EQmbISJlylT-fxJPsR1aLeZpWGKQUdQze0VJCA/5.png" alt="Sandglass Iridium #5 - Flute Player"/>',
@@ -557,7 +557,7 @@ class FirstPersonTemplate {
 			}
 
 
-			BABYLON.SceneLoader.ImportMeshAsync("", "", "https://sandglass.s3.us-west-2.amazonaws.com/sandPre5.glb", scene).then(function (result) {
+			BABYLON.SceneLoader.ImportMeshAsync("", "assets/", "room.glb", scene).then(function (result) {
 				result.meshes.forEach(mesh => {
 					mesh.checkCollisions = true;
 				});
